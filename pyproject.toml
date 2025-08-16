@@ -11,6 +11,9 @@ dependencies = ["pytest (==8)", "pydantic (==2.10.3)"]
 
 [tool.poetry]
 packages = [{ include = "UdacitySimulatorIO", from = "src" }]
+name = "udacitysimulatorio"
+version = "0.1.0"
+description = "IO interface for Udacity simulator"
 
 
 [tool.poetry.group.test]
