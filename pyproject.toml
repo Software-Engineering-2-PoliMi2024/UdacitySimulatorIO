@@ -13,6 +13,12 @@ dependencies = ["pytest (==8)", "pydantic (==2.10.3)"]
 packages = [{ include = "UdacitySimulatorIO", from = "src" }]
 
 
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "8"
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
