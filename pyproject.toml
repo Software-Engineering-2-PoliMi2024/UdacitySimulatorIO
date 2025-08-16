@@ -14,6 +14,7 @@ packages = [{ include = "UdacitySimulatorIO", from = "src" }]
 name = "udacitysimulatorio"
 version = "0.1.0"
 description = "IO interface for Udacity simulator"
+authors = [{ name = "Paolo Ginefra", email = "ginefra.paolo@gmail.com" }]
 
 
 [tool.poetry.group.test]
