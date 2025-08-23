@@ -8,6 +8,16 @@ from dataclasses import field
 class UdacitySimulationOutput():
     """A class to sequentially store the outputs of a simulation
 
+    Arguments:
+        elapsedTime (float): The elapsed time of the simulation in seconds
+        iterations (int): The number of iterations completed in the simulation
+        positions (List[Tuple[float, float, float]]): The list of positions recorded during the simulation
+        speeds (List[float]): The list of speeds recorded during the simulation
+        xtes (List[float]): The list of cross-track errors recorded during the simulation
+        steerings (List[float]): The list of steerings recorded during the simulation
+        throttles (List[float]): The list of throttles recorded during the simulation
+        road (List[Tuple]): The list of road information recorded during the simulation
+
     Returns:
         _type_: _description_
     """
