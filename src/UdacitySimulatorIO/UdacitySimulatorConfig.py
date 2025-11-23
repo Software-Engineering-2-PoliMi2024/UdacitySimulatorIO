@@ -46,7 +46,6 @@ class UdacitySimulatorConfig():
     def to_json(self) -> str:
         return json.dumps(asdict(self))
 
-
 if __name__ == '__main__':
     config = UdacitySimulatorConfig()
     print(config.to_json())

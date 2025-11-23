@@ -1,8 +1,9 @@
 from pydantic.dataclasses import dataclass
 from typing import List, Tuple
 import json
+from pathlib import Path
 from dataclasses import field
-
+import json_numpy as jnp
 
 @dataclass
 class UdacitySimulationOutput():
@@ -29,7 +30,7 @@ class UdacitySimulationOutput():
     xtes: List[float] = field(default_factory=lambda: [])
     steerings: List[float] = field(default_factory=lambda: [])
     throttles: List[float] = field(default_factory=lambda: [])
-    road: List[Tuple] = field(default_factory=lambda: [])
+    road: List[Tuple[float]] = field(default_factory=lambda: [])
 
     # def to_json(self):
     #     return json.dumps(self.__dict__)
@@ -48,6 +49,9 @@ class UdacitySimulationOutput():
         self.throttles.append(throttle)
 
     @classmethod
-    def from_json(cls, json_str):
+    def from_json(cls, json_str: str):
         json_dict = json.loads(json_str)
         return cls(**json_dict)
+    
+    def to_json(self) -> str:
+        return jnp.dumps(self.__dict__)
